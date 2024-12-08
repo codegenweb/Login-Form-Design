@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-family: poppins;
+}
+
+body {
+  background-image: url(back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+#login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 35%;
+  padding: 50px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.329);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  margin:0 0 50px;
+  letter-spacing: 3px;
+
+  animation: reloadA 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+.input-wrap {
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  height: 60px;
+  width: 90%;
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.459);
+  
+}
+
+.in-1 {
+  animation: reloadA 1.2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+.in-2 {
+  animation: reloadA 1.4s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+input {
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: white;
+  padding: 5px 25px;
+  flex: 1;
+}
+input::placeholder {
+  font-size: 1.2rem;
+  color: white;
+}
+.input-wrap i {
+  font-size: 1.2rem;
+  color: white;
+  padding-right: 25px;
+}
+
+.rem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 40px;
+  animation: reloadA 1.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+  
+}
+
+.rem p,
+.rem a {
+  font-size: 1.2rem;
+  color: white;
+  
+  cursor: pointer;
+}
+
+button {
+  font-size: 1.2rem;
+  height: 60px;
+  width: 90%;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  animation: reloadA 2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+button:hover {
+  background-color: rgb(221, 221, 221);
+}
+
+.reg {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 40px;
+  animation: reloadA 2.2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1.2s;
+}
+.reg a {
+  font-weight: 500;
+  cursor: pointer;
+
+}
+
+/* Amimation */
+
+@keyframes reloadA {
+  from {
+    transform: translateY(250px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
